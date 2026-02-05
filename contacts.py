@@ -3,7 +3,7 @@
 
 class BaseClass:
     """Clase base para operaciones CRUD de contactos."""
-    
+
     contacts = []
 
     def add_contact(self, name, email, phone):
@@ -45,7 +45,8 @@ class Contacts(BaseClass):
         """Muestra todos los contactos en formato legible."""
         contacts = self.all_contacts()
         for contact in contacts:
-            print(f"{contact['name']} - {contact['email']} - {contact['phone']}")
+            print(f"{contact['name']} - {contact['email']} - "
+                  f"{contact['phone']}")
 
     def search(self, email):
         """Busca un contacto por email."""
